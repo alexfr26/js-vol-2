@@ -40,8 +40,8 @@ const images = {
 preloader(images);
 
 const theme = createTheme({
-	primary: "#fff25a",
-	secondary: "#1F2022",
+	primary: "#fff",
+	secondary: "#2d2d2d",
 	tertiary: "#03A9FC",
 	quartenary: "#CECECE"
 }, {
@@ -128,6 +128,7 @@ export default class Presentation extends React.Component {
 					<List>
 						<ListItem>Наслідування та класи</ListItem>
 						<ListItem>Модулі</ListItem>
+						<ListItem>Symbols</ListItem>
 						<ListItem>Ітератори та генератори</ListItem>
 						<ListItem>Promises</ListItem>
 						<ListItem>async/await</ListItem>
@@ -238,9 +239,10 @@ export default class Presentation extends React.Component {
 					lang="js"
 					code={require('!raw-loader!./examples/exportDefaultExample')}
 					ranges={[
-						{loc: [0, 1]},
-						{loc: [2, 3]},
-						{loc: [4, 5]}
+						{loc: [0, 3]},
+						{loc: [4, 9]},
+						{loc: [10, 15]},
+						{loc: [16, 22]},
 					]}/>
 				<Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
 					<Text><Link
