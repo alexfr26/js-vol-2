@@ -306,6 +306,7 @@ export default class Presentation extends React.Component {
 				</Slide>
 				<Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
 					<CodePane
+						textSize={'20px'}
 						lang={'javascript'}
 						source={require('!raw-loader!./examples/iteratorExample.js')}
 					/>
@@ -330,6 +331,7 @@ export default class Presentation extends React.Component {
 					<Text>Використання yield
 						будь–де, включаючи функції всередині генераторів, призведе до синтаксичної помилки</Text>
 					<CodePane
+						textSize={'20px'}
 						lang={'javascript'}
 						source={require('!raw-loader!./examples/wrongYield')}
 					/>
@@ -414,6 +416,7 @@ export default class Presentation extends React.Component {
 
 				<Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
 					<CodePane
+						textSize={'20px'}
 						lang={'javascript'}
 						source={require('!raw-loader!./examples/newPromise.js')}
 					/>
@@ -423,6 +426,7 @@ export default class Presentation extends React.Component {
 				<Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
 					<Heading size={3} textColor={'tertiary'}>Помилка виконавця</Heading>
 					<CodePane
+						textSize={'20px'}
 						lang={'javascript'}
 						source={require('!raw-loader!./examples/throwErrorPromise.js')}
 					/>
@@ -447,6 +451,7 @@ export default class Presentation extends React.Component {
 				</Slide>
 				<Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
 					<CodePane
+						textSize={'20px'}
 						lang={'javascript'}
 						source={require('!raw-loader!./examples/asyncAwait.js')}
 					/>
