@@ -1,21 +1,45 @@
-# Spectacle Boilerplate
+# Homework
 
-## Reference
+* Create Fibonacci numbers generator using JavaScript generators
 
-The Spectacle core API is available at [https://github.com/FormidableLabs/spectacle/blob/master/README.markdown](https://github.com/FormidableLabs/spectacle/blob/master/README.markdown).
+* Create `promisify` function that takes some async function with callback as the latest argument and returns a new function, like a taken function, but new function should returns a promise;
 
-## Development
+Function with callback:
 
-After downloading the boilerplate, your first order of business is to open terminal and run `yarn`. (or `npm install` if you're about that life)
+ ```
+ function fetchUser(id, callback) {
+ 	const users = {
+ 		1: {
+ 			uid: 1,
+ 			name: 'John Doe',
+ 			age: 22
+ 		}
+ 	};
 
-Next, run `rm -R .git` to remove the existing version control.
+ 	const selectedUser = users[id];
 
-Then, to start up the local server, run `npm start`
+ 	const error = selectedUser ? null : 'No User Found';
 
-Open a browser and hit [http://localhost:3000](http://localhost:3000), and we are ready to roll
+ 	setTimeout(function () {
+ 		callback(error, selectedUser)
+ 	}, 500)
+ }
+ ```
+ 
+ Write function `promisify` that make it possible to do the following: 
+ 
+ ```
+ const promisify = (fn) => {
+  // your code here
+ }
+ 
+ const promisifiedFetchUser = promisify(fetchUser);
+ 
+ promisifiedFetchUser(1)
+  .then(response => console.log(`User data: ${response}`))
+  .catch(error => console.log(`An error happened: ${error}`))
+ 
+ ```
+ 
+ 
 
-## Build & Deployment
-
-Building the dist version of the project is as easy as running `npm run build`
-
-If you want to deploy the slideshow to surge, run `npm run deploy`
