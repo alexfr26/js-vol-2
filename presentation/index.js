@@ -113,11 +113,12 @@ export default class Presentation extends React.Component {
 				{/*Intro */}
 				<Slide transition={["zoom"]} bgColor="primary">
 					<Heading size={1} fit caps lineHeight={1} textColor="secondary">
-						JavaScript vol. 2
+						JavaScript частина 2
 					</Heading>
 				</Slide>
 				<Slide transition={["zoom"]} bgColor="primary">
-					<Heading size={2}>@komarnitskyi</Heading>
+					<Heading size={3}>Андрій Комарніцький</Heading>
+					<Heading size={5}>@komarnitskyi</Heading>
 					<Text>---</Text>
 					<Text>JavaScript developer at ASD</Text>
 					<Text>Nodeschool Chernivtsi</Text>
@@ -298,6 +299,8 @@ export default class Presentation extends React.Component {
 
 
 				<Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+					<Image src={'https://static.devli.ru/public/images/gifs/201304/07a3eb01-3cc0-4059-8b30-caed3aba391e.gif'} width={400}
+						   height={250}></Image>
 					<Heading size={1}>Ітератори та генератори</Heading>
 				</Slide>
 
@@ -306,6 +309,7 @@ export default class Presentation extends React.Component {
 				</Slide>
 				<Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
 					<CodePane
+						textSize={'20px'}
 						lang={'javascript'}
 						source={require('!raw-loader!./examples/iteratorExample.js')}
 					/>
@@ -330,6 +334,7 @@ export default class Presentation extends React.Component {
 					<Text>Використання yield
 						будь–де, включаючи функції всередині генераторів, призведе до синтаксичної помилки</Text>
 					<CodePane
+						textSize={'20px'}
 						lang={'javascript'}
 						source={require('!raw-loader!./examples/wrongYield')}
 					/>
@@ -386,7 +391,19 @@ export default class Presentation extends React.Component {
 				<Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
 					<Image src={'https://media3.giphy.com/media/Lopx9eUi34rbq/giphy.gif'} width={450}
 						   height={250}></Image>
-					<Heading size={1}>Callbacks hell</Heading>
+					<Heading size={1}>Callback hell</Heading>
+				</Slide>
+				<Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+					<CodePane
+						textSize={'16px'}
+						lang={'javascript'}
+						source={require('!raw-loader!./examples/callbackHell.js')}
+					/>
+				</Slide>
+				<Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+					<Heading size={3}>Це дуже так собі</Heading>
+					<Image src={'http://static.devli.ru/public/images/gifs/201709/8e2bbba9-68b2-41ee-abef-6b1ed1a0d1e0.gif'} width={300}
+						   height={400}></Image>
 				</Slide>
 
 				<Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -414,6 +431,7 @@ export default class Presentation extends React.Component {
 
 				<Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
 					<CodePane
+						textSize={'20px'}
 						lang={'javascript'}
 						source={require('!raw-loader!./examples/newPromise.js')}
 					/>
@@ -423,6 +441,7 @@ export default class Presentation extends React.Component {
 				<Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
 					<Heading size={3} textColor={'tertiary'}>Помилка виконавця</Heading>
 					<CodePane
+						textSize={'20px'}
 						lang={'javascript'}
 						source={require('!raw-loader!./examples/throwErrorPromise.js')}
 					/>
@@ -445,11 +464,30 @@ export default class Presentation extends React.Component {
 				<Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
 					<Heading size={3} textColor={'tertiary'}>async / await</Heading>
 				</Slide>
+
 				<Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
 					<CodePane
+						textSize={'20px'}
 						lang={'javascript'}
 						source={require('!raw-loader!./examples/asyncAwait.js')}
 					/>
+				</Slide>
+				<Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+					<Heading size={3}>Не забуваємо ловити помилки</Heading>
+					<Image src={'https://static.devli.ru/public/images/gifs/201304/e83a10e1-e9a1-48b7-96e1-93a35ee70fd6.gif'} width={250}
+						   height={400}></Image>
+				</Slide>
+
+				<Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+					<CodePane
+						textSize={'20px'}
+						lang={'javascript'}
+						source={require('!raw-loader!./examples/asyncErrors.js')}
+					/>
+				</Slide>
+
+				<Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+					<Heading size={3}>The end</Heading>
 				</Slide>
 
 			</Deck>

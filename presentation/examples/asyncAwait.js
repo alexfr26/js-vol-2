@@ -7,24 +7,10 @@ async function init() {
 }
 
 async function init() {
-	let user;
-
-	try {
-		user = await fetchUser();
-	} catch (error) {
-
-	}
-}
-
-async function init() {
-	let users;
 	const usersIds = [1, 2, 3, 4];
 
-	try {
-		users = await Promise.all(usersIds.map(id => fetchUser(id)));
-	} catch (error) {
+	const users = await Promise.all(usersIds.map(id => fetchUser(id)));
 
-	}
 }
 
 

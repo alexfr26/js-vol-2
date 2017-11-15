@@ -1,25 +1,35 @@
-'use strict';
+/*
+* Написати функцію, що прийматиме іншу функцію яка потребує колбека,
+* і зроби так, щоб вона повертала проміс
+* */
 
-class Animal {
-	constructor(name) {
-		console.log('Animal constructor');
-		this.name = name;
-	}
+fetchUser(arg1, arg2,arg3, callback);
+fetchUser(id)
 
-	walk() {
-		console.log("I walk: " + this.name);
-	}
+
+function fetchUser(id, callback) {
+
+	const users = {
+		1: {
+			uid: 1,
+			name: 'John Doe',
+			age: 22
+		}
+	};
+
+	const selectedUser = users[id];
+
+	const error = selectedUser ? null : 'No User Found';
+
+	setTimeout(function () {
+		callback(error, selectedUser)
+	}, 500)
 }
 
-class Rabbit extends Animal {
-	constructor(){
-		super('Some name');
-		console.log('Rabbit constructor')
-	}
-	walk() {
-		super.walk();
-		console.log("...and jump!");
-	}
+function userDataCallback(err, data) {
+console.log(arguments)
 }
 
-new Rabbit("Вася").walk();
+fetchUser(2, userDataCallback);
+
+// Написати генератор чисел фібоначі використовуючи JS generators
