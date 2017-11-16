@@ -2,7 +2,7 @@
 
 * Create Fibonacci numbers generator using JavaScript generators
 
-* Create `promisify` function that takes some async function with callback as the latest argument and returns a new function, like a taken function, but new function should returns a promise;
+* Create `promisify` function that accepts some async function with callback as last argument and returns a new function, like a taken function, but new function should return a promise;
 
 Function with callback:
 
